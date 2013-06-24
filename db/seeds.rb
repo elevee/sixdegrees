@@ -73,7 +73,7 @@ Star.delete_all
 stars.each do |star_attrs|
   movies = star_attrs.delete(:movies)
   s = Star.create star_attrs
-  #movies.each do |movie|
-  #  s.movies.create title: movie
-  #end
+  movies.each do |movie|
+   s.movies.create title: movie
+  end
 end
